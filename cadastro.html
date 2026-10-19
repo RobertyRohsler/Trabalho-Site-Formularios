@@ -1,21 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Inscrição | Qualifica+</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
-
     <h1>Qualifica+</h1>
 
     <nav>
@@ -24,104 +19,98 @@
         <a href="cadastro.html">Inscreva-se</a>
         <a href="contato.html">Contato</a>
     </nav>
-
 </header>
 
 <main>
+    <section class="formulario">
 
-<section class="formulario">
+        <h2>Inscreva-se em um curso</h2>
 
-    <h2>Inscreva-se em um curso</h2>
+        <p>Preencha os dados abaixo para realizar sua inscrição.</p>
 
-    <form>
+        <form id="formInscricao">
 
-        <label for="nome">Nome completo:</label>
+            <label for="nome">Nome completo:</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                required
+                minlength="3"
+            >
 
-        <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite seu nome"
-            required
-        >
+            <label for="email">E-mail:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu@email.com"
+                required
+            >
 
-        <label for="email">E-mail:</label>
+            <label for="telefone">Telefone:</label>
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+            >
 
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="seu@email.com"
-            required
-        >
+            <label for="curso">Escolha o curso:</label>
+            <select id="curso" name="curso" required>
+                <option value="">Selecione um curso</option>
+                <option value="informatica">Informática Básica</option>
+                <option value="programacao">Programação Web</option>
+                <option value="design">Design Gráfico</option>
+                <option value="administrativo">Assistente Administrativo</option>
+            </select>
 
-        <label for="telefone">Telefone:</label>
+            <label>Modalidade:</label>
 
-        <input
-            type="tel"
-            id="telefone"
-            name="telefone"
-            placeholder="(00) 00000-0000"
-        >
+            <div>
+                <input
+                    type="radio"
+                    id="online"
+                    name="modalidade"
+                    value="Online"
+                    required
+                >
+                <label for="online">Online</label>
 
-        <label for="curso">Escolha o curso:</label>
+                <input
+                    type="radio"
+                    id="presencial"
+                    name="modalidade"
+                    value="Presencial"
+                >
+                <label for="presencial">Presencial</label>
+            </div>
 
-        <select id="curso" name="curso">
+            <label for="observacoes">Observações:</label>
+            <textarea
+                id="observacoes"
+                name="observacoes"
+                rows="5"
+                placeholder="Digite alguma observação (opcional)"
+            ></textarea>
 
-            <option value="">Selecione</option>
+            <button type="submit" class="botao">
+                Enviar inscrição
+            </button>
 
-            <option value="informatica">
-                Informática Básica
-            </option>
+            <p id="mensagem" role="status" aria-live="polite"></p>
 
-            <option value="programacao">
-                Programação Web
-            </option>
+        </form>
 
-            <option value="design">
-                Design Gráfico
-            </option>
-
-            <option value="administrativo">
-                Assistente Administrativo
-            </option>
-
-        </select>
-
-        <label for="modalidade">Modalidade:</label>
-
-        <div>
-
-            <input type="radio" name="modalidade" value="online">
-            Online
-
-            <input type="radio" name="modalidade" value="presencial">
-            Presencial
-
-        </div>
-
-        <label for="observacoes">Observações:</label>
-
-        <textarea
-            id="observacoes"
-            name="observacoes"
-            rows="5"
-            placeholder="Digite alguma observação..."
-        ></textarea>
-
-        <button type="submit" class="botao">
-            Enviar inscrição
-        </button>
-
-    </form>
-
-</section>
-
+    </section>
 </main>
 
 <footer>
-    <p>© 2026 Qualifica+</p>
+    <p>© 2026 Qualifica+ - Todos os direitos reservados.</p>
 </footer>
 
+<script src="main.js"></script>
+
 </body>
-</html> 
+</html>
