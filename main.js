@@ -83,7 +83,7 @@ if (statusInscricao) {
 
             
             areaDados.hidden = false;
-            statusInscricao.textContent = "Inscrição preparada com sucesso! Confira os dados abaixo.";
+            statusInscricao.textContent = "Inscrição realizada com sucesso! Confira os dados abaixo.";
 
             
             sessionStorage.removeItem("inscricaoQualifica");

@@ -242,6 +242,10 @@ footer {
     margin-top: 337px;  
 }
 
+.rodape{
+    margin-top: 557px;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 700px) {
